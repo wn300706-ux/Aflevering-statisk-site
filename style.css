@@ -1,0 +1,308 @@
+/* Start på Startindstillinger */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Slut på Startindstillinger */
+
+/* Start på key */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  display: none;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Montserrat", "Inter", sans-serif;
+  color: black;
+  line-height: 1.8;
+  padding: 5rem;
+}
+
+h2 {
+  font-size: 40px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Slut på key */
+
+/* Start på MOBILSITE */
+
+/* Start på (INDEX) mobilførst */
+
+.kategori-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.kategori-list a {
+  background: #000;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 18px;
+}
+
+/* Slut på (INDEX) mobilførst */
+
+/* Start på (PRODUCTLIST) mobilførst */
+
+.Logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.Logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  margin-top: 2rem;
+}
+
+.grid-products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.grid-products a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-product img {
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+
+.article-product {
+  position: relative;
+  text-decoration: none;
+}
+
+.article-product h3 {
+  font-size: 20px;
+}
+
+.article-product p {
+  font-size: 18px;
+}
+
+.brand {
+  color: grey;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+}
+
+/* Start på SOLDOUT */
+
+/* SOLD OUT */
+.soldout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+  border-radius: 0px;
+}
+
+/* Slut på SOLDOUT */
+
+/* Start på OLD PRICE */
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Slut på OLD PRICE */
+
+/* Start på DISCOUNT */
+
+.discount {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.square {
+  background: red;
+  color: white;
+  padding: 0rem 0.5rem;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.price-square {
+  font-weight: bold;
+}
+
+/* Slut på DISCOUNT */
+
+/* Slut på (PRODUCTLIST) mobilførst */
+
+/* Start på (PRODUCT) mobilførst */
+
+.Logox {
+  display: flex;
+  flex-direction: column;
+}
+
+.Logox a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  margin-top: 2rem;
+}
+
+.productpage-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.productpage-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.product-details {
+  text-align: left;
+  margin-top: -2rem;
+  gap: 1rem;
+}
+
+.product-details h2 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.product-details p {
+  text-align: left;
+  font-size: 18px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.buy-button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background: #d3d3d3;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Slut på (PRODUCT) mobilførst */
+
+/* Slut på MOBILSITE */
+
+/* Start på desktop */
+
+@media (min-width: 768px) {
+  main {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+
+  header {
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  h2 {
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .kategori-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem 0rem;
+  }
+
+  .grid-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .grid-product-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .productpage-image img {
+    width: 100%;
+    height: 85%;
+    border-radius: 10px;
+  }
+
+  .product-details {
+    margin-top: 7rem;
+    margin-left: 8rem;
+  }
+
+  .product-details h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+
+  .product-details p {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .buy-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 22px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+  }
+}
+
+/* Slut på desktop */
