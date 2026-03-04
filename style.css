@@ -78,6 +78,13 @@ h2 {
   margin-top: 2rem;
 }
 
+.link-back {
+  text-decoration: none;
+  color: black;
+  margin-left: -1.9em;
+  font-size: 17px;
+}
+
 .grid-products {
   display: grid;
   grid-template-columns: 1fr;
