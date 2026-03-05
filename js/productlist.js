@@ -8,15 +8,34 @@ console.log(klikkategori);
 
 const container = document.querySelector(".grid-products");
 
-const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${klikkategori}`;
+const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${klikkategori}&limit=30`;
+
+document
+  .querySelectorAll("button")
+  .forEach((knap) => knap.addEventListener("click", filter));
+
+let allData;
 
 function getData() {
   fetch(endpoint)
     .then((res) => res.json())
-    .then(showData);
+    .then((data) => {
+      allData = data;
+      showProducts(allData);
+    });
 }
 
-function showData(produkter) {
+function filter(e) {
+  const valgt = e.target.textContent;
+  if (valgt == "All") {
+    showProducts(allData);
+  } else {
+    const udsnit = allData.filter((element) => element.gender == valgt);
+    showProducts(udsnit);
+  }
+}
+
+function showProducts(produkter) {
   let markup = "";
   //   console.log(fangst);
   produkter.forEach((produkt) => {
