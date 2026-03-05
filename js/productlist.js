@@ -24,14 +24,14 @@ function showData(produkter) {
     console.log(produkt);
     markup += `
             <a href="product.html?id=${produkt.id}">
-          <article class="article-product ${produkt.soldout && "soldOut"} ${produkt.discount && "onSale"}">
-            <span class="soldout">Sold Out</span>
+          <article class="article-product ${produkt.soldout ? "soldOut" : ""} ${produkt.discount ? "onSale" : ""}">
+            ${produkt.soldout ? '<span class="soldout">Sold Out</span>' : ""}
             <img src="https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp" />
             <h3>${produkt.productdisplayname}</h3>
             <p class="brand">T-shirts | Puma</p>
             <p class="old-price">${produkt.price},-</p>
             <div class="discount">
-              <p class="price-square">NOW DKK <span>${Math.round(produkt.price - (produkt.price * produkt.discount) / 100)}</span>,-</p>
+            <p class="price-square">NOW DKK <span>${Math.round(produkt.price - (produkt.price * produkt.discount) / 100)}</span>,-</p>
               <p class="square"><span>${produkt.discount}</span>%</p>
             </div>
           </article>
